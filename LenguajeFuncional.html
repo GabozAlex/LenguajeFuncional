@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Lenguajes Funcionales Híbridos en IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E0F7FA; /* Brilliant Blues - Very Light Cyan */
+            color: #01579B; /* Brilliant Blues - Dark Blue for primary text */
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; 
+            max-height: 350px; 
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        h1, h2, h3 {
+            color: #01579B; /* Brilliant Blues - Dark Blue */
+        }
+        .accent-text {
+            color: #0288D1; /* Brilliant Blues - Medium Blue */
+        }
+        .highlight-text {
+            color: #FFC107; /* Brilliant Blues - Amber for highlights */
+        }
+        .section-icon {
+            font-size: 2.5rem;
+            margin-right: 0.75rem;
+            color: #0288D1; 
+        }
+        .flowchart-step {
+            border: 2px solid #4FC3F7; /* Lighter Blue */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            background-color: #FFFFFF;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #0288D1;
+            align-self: center;
+        }
+         /* Plan Narrative & Structure:
+            1. Title Section
+            2. Introduction: ¿Qué son los Lenguajes Funcionales Híbridos? (Definition, Key Features, Popular Examples)
+            3. Core Argument: ¿Por Qué Usarlos en Inteligencia Artificial? (Advantages with explanations)
+            4. Applications: Casos de Uso en IA (Specific examples)
+            5. Challenges: Desafíos y Consideraciones
+            6. Future Outlook: El Futuro es Híbrido y Funcional para la IA
+            7. Bibliography
+            Color Palette Chosen: "Brilliant Blues" (#E0F7FA, #FFFFFF, #01579B, #0288D1, #29B6F6, #4FC3F7, #FFC107, #455A64)
+            Visualization Choices & Justification (Confirming NO SVG, NO MERMAID JS):
+            - General layout: Tailwind CSS grid and flexbox.
+            - Conceptual Diagram (Paradigm Convergence): HTML/CSS structure. Goal: Organize. Method: HTML/CSS (Tailwind). NO SVG.
+            - Lists (Features, Examples, Advantages, Use Cases, Challenges): Styled HTML lists. Goal: Inform. Method: HTML/CSS.
+            - Icons: Unicode characters. Goal: Inform (visual cue). Method: Unicode. NO SVG.
+            - Placeholder Bar Chart (Example: Popularity of Hybrid Languages): Chart.js Canvas. Goal: Compare. Method: Chart.js. NO SVG.
+            - Placeholder Donut Chart (Example: AI Application Areas): Chart.js Canvas. Goal: Compare. Method: Chart.js. NO SVG.
+            - Explicit confirmation: NO SVG graphics were used. NO MERMAID JS was used.
+        */
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gradient-to-r from-[#0288D1] to-[#29B6F6] text-white py-12 px-4 sm:px-6 lg:px-8 text-center rounded-b-xl shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Lenguajes de Programación Funcional Híbridos en la IA</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">Una exploración de su impacto, ventajas y futuro en el desarrollo de Inteligencia Artificial.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="que-son" class="mb-12">
+            <div class="card">
+                <div class="flex items-center mb-6">
+                    <span class="section-icon">🧩</span>
+                    <h2 class="text-3xl font-semibold">¿Qué son los Lenguajes Funcionales Híbridos?</h2>
+                </div>
+                <p class="text-lg mb-6 text-[#455A64]">
+                    Son lenguajes de programación que combinan los principios de la <strong>programación funcional</strong> (como inmutabilidad, funciones como ciudadanos de primera clase y evaluación perezosa) con características de otros paradigmas, como la <strong>programación orientada a objetos</strong> (clases, herencia, encapsulamiento) o la <strong>programación imperativa</strong> (estado mutable, secuencias de comandos). Esta fusión permite a los desarrolladores aprovechar lo mejor de varios mundos para construir software robusto y flexible.
+                </p>
+
+                <div class="mb-8 p-6 bg-[#E0F7FA] rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 accent-text">Convergencia de Paradigmas</h3>
+                    <p class="text-[#455A64] mb-4">Estos lenguajes se sitúan en la intersección de múltiples enfoques de programación, buscando un equilibrio pragmático:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+                            <span class="text-4xl block mb-2">🧘</span>
+                            <h4 class="font-semibold text-lg text-[#01579B]">Funcional</h4>
+                            <p class="text-sm text-[#455A64]">Pureza, inmutabilidad, funciones de orden superior.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+                            <span class="text-4xl block mb-2">🧱</span>
+                            <h4 class="font-semibold text-lg text-[#01579B]">Orientado a Objetos</h4>
+                            <p class="text-sm text-[#455A64]">Encapsulamiento, herencia, polimorfismo.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+                            <span class="text-4xl block mb-2">📜</span>
+                            <h4 class="font-semibold text-lg text-[#01579B]">Imperativo</h4>
+                            <p class="text-sm text-[#455A64]">Control de flujo explícito, estado mutable (cuando es necesario).</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="text-2xl font-semibold mb-4 accent-text">Características Clave</h3>
+                <ul class="list-disc list-inside space-y-3 text-[#455A64] mb-6">
+                    <li><strong>Inmutabilidad por Defecto (o facilitada):</strong> Ayuda a evitar efectos secundarios, simplifica la concurrencia y facilita la depuración.</li>
+                    <li><strong>Funciones de Primera Clase y de Orden Superior:</strong> Las funciones pueden ser tratadas como cualquier otro valor (asignadas a variables, pasadas como argumentos, retornadas por otras funciones), permitiendo un alto nivel de abstracción.</li>
+                    <li><strong>Sistemas de Tipos Fuertes:</strong> Muchos lenguajes híbridos (como Scala, F#) poseen sistemas de tipos robustos que detectan errores en tiempo de compilación.</li>
+                    <li><strong>Concurrencia y Paralelismo Simplificados:</strong> Las estructuras funcionales son inherentemente más seguras para la ejecución paralela.</li>
+                    <li><strong>Interoperabilidad:</strong> Suelen ofrecer buena integración con otros lenguajes y ecosistemas (ej. JVM para Scala/Clojure/Kotlin, .NET para F#).</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mb-4 accent-text">Ejemplos Populares</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                    <div class="p-4 border border-[#4FC3F7] rounded-lg hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-xl text-[#0288D1]">Scala</h4>
+                        <p class="text-sm text-[#455A64]">Ampliamente usado en Big Data (Apache Spark) y sistemas concurrentes. Combina funcional y OO.</p>
+                    </div>
+                    <div class="p-4 border border-[#4FC3F7] rounded-lg hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-xl text-[#0288D1]">F#</h4>
+                        <p class="text-sm text-[#455A64]">Un lenguaje funcional de Microsoft sobre .NET, fuerte en análisis de datos y modelado.</p>
+                    </div>
+                    <div class="p-4 border border-[#4FC3F7] rounded-lg hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-xl text-[#0288D1]">Swift</h4>
+                        <p class="text-sm text-[#455A64]">Conocido por el desarrollo de apps de Apple, tiene fuertes influencias funcionales.</p>
+                    </div>
+                    <div class="p-4 border border-[#4FC3F7] rounded-lg hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-xl text-[#0288D1]">Kotlin</h4>
+                        <p class="text-sm text-[#455A64]">Popular en Android, también soporta programación funcional junto con OO en la JVM.</p>
+                    </div>
+                    <div class="p-4 border border-[#4FC3F7] rounded-lg hover:shadow-lg transition-shadow">
+                        <h4 class="font-bold text-xl text-[#0288D1]">Clojure</h4>
+                        <p class="text-sm text-[#455A64]">Un dialecto de Lisp dinámico y funcional que corre en la JVM y JavaScript.</p>
+                    </div>
+                </div>
+                 <p class="text-sm text-[#455A64] mb-4">Para ilustrar la popularidad (hipotética) o el enfoque de estos lenguajes en IA, consideremos el siguiente gráfico de barras. Muestra una distribución ficticia de la relevancia percibida o la adopción en proyectos de IA.</p>
+                <div class="chart-container bg-gray-50 p-4 rounded-lg shadow">
+                    <canvas id="popularLanguagesChart"></canvas>
+                </div>
+                 <p class="text-xs text-gray-500 mt-2 text-center">Este gráfico es ilustrativo y los datos son ficticios.</p>
+
+            </div>
+        </section>
+
+        <section id="por-que-usarlos" class="mb-12">
+            <div class="card">
+                <div class="flex items-center mb-6">
+                    <span class="section-icon">💡</span>
+                    <h2 class="text-3xl font-semibold">¿Por Qué Usarlos en Inteligencia Artificial?</h2>
+                </div>
+                <p class="text-lg mb-6 text-[#455A64]">
+                    La Inteligencia Artificial, especialmente el Machine Learning (ML) y el Deep Learning (DL), implica manejar grandes volúmenes de datos, algoritmos complejos y la necesidad de sistemas robustos y escalables. Los lenguajes funcionales híbridos ofrecen ventajas significativas en este dominio.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-start p-4 bg-[#E0F7FA] rounded-lg">
+                        <span class="text-2xl mr-3">📊</span>
+                        <div>
+                            <h4 class="font-semibold text-xl accent-text">1. Manejo Eficaz de Datos Complejos</h4>
+                            <p class="text-[#455A64]">Las estructuras de datos inmutables y las funciones de transformación de colecciones (map, filter, reduce) son ideales para el preprocesamiento y manipulación de datasets. Facilitan la creación de pipelines de datos limpios y predecibles.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-[#E0F7FA] rounded-lg">
+                        <span class="text-2xl mr-3">🚀</span>
+                        <div>
+                            <h4 class="font-semibold text-xl accent-text">2. Concurrencia y Paralelismo Avanzados</h4>
+                            <p class="text-[#455A64]">El entrenamiento de modelos y el procesamiento de datos en IA son tareas inherentemente paralelizables. La inmutabilidad y la ausencia de efectos secundarios reducen drásticamente los problemas comunes de la concurrencia. Apache Spark (escrito en Scala) es un ejemplo clave.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-[#E0F7FA] rounded-lg">
+                        <span class="text-2xl mr-3">🧩</span>
+                        <div>
+                            <h4 class="font-semibold text-xl accent-text">3. Abstracción y Modularidad</h4>
+                            <p class="text-[#455A64]">Las funciones de orden superior permiten construir abstracciones poderosas, llevando a un código más concis
