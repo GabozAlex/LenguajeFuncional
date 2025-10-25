@@ -1,0 +1,65 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E0F7FA; /* Brilliant Blues - Very Light Cyan */
+    color: #01579B; /* Brilliant Blues - Dark Blue for primary text */
+}
+
+/* El estilo de la tarjeta utiliza clases de Tailwind, pero esta clase CSS base define el aspecto general */
+.card {
+    background-color: #FFFFFF;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* Contenedor del gráfico para asegurar dimensiones correctas */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    max-height: 350px;
+}
+@media (min-width: 768px) {
+    .chart-container {
+        height: 350px;
+        max-height: 400px;
+    }
+}
+
+/* Estilos de color para títulos y acentos */
+h1, h2, h3 {
+    color: #01579B; /* Brilliant Blues - Dark Blue */
+}
+.accent-text {
+    color: #0288D1; /* Brilliant Blues - Medium Blue */
+}
+.highlight-text {
+    color: #FFC107; /* Brilliant Blues - Amber for highlights */
+}
+.section-icon {
+    font-size: 2.5rem;
+    margin-right: 0.75rem;
+    color: #0288D1;
+}
+
+/* Estilos de los pasos de diagrama de flujo (no usados en la infografía final, pero mantenidos de la estructura original) */
+.flowchart-step {
+    border: 2px solid #4FC3F7; /* Lighter Blue */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #FFFFFF;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flowchart-arrow {
+    font-size: 2rem;
+    color: #0288D1;
+    align-self: center;
+}

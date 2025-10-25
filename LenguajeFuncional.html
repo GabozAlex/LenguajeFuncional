@@ -7,83 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #E0F7FA; /* Brilliant Blues - Very Light Cyan */
-            color: #01579B; /* Brilliant Blues - Dark Blue for primary text */
-        }
-        .card {
-            background-color: #FFFFFF;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px; 
-            max-height: 350px; 
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-                max-height: 400px;
-            }
-        }
-        h1, h2, h3 {
-            color: #01579B; /* Brilliant Blues - Dark Blue */
-        }
-        .accent-text {
-            color: #0288D1; /* Brilliant Blues - Medium Blue */
-        }
-        .highlight-text {
-            color: #FFC107; /* Brilliant Blues - Amber for highlights */
-        }
-        .section-icon {
-            font-size: 2.5rem;
-            margin-right: 0.75rem;
-            color: #0288D1; 
-        }
-        .flowchart-step {
-            border: 2px solid #4FC3F7; /* Lighter Blue */
-            padding: 1rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            background-color: #FFFFFF;
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .flowchart-arrow {
-            font-size: 2rem;
-            color: #0288D1;
-            align-self: center;
-        }
-         /* Plan Narrative & Structure:
-            1. Title Section
-            2. Introduction: ¿Qué son los Lenguajes Funcionales Híbridos? (Definition, Key Features, Popular Examples)
-            3. Core Argument: ¿Por Qué Usarlos en Inteligencia Artificial? (Advantages with explanations)
-            4. Applications: Casos de Uso en IA (Specific examples)
-            5. Challenges: Desafíos y Consideraciones
-            6. Future Outlook: El Futuro es Híbrido y Funcional para la IA
-            7. Bibliography
-            Color Palette Chosen: "Brilliant Blues" (#E0F7FA, #FFFFFF, #01579B, #0288D1, #29B6F6, #4FC3F7, #FFC107, #455A64)
-            Visualization Choices & Justification (Confirming NO SVG, NO MERMAID JS):
-            - General layout: Tailwind CSS grid and flexbox.
-            - Conceptual Diagram (Paradigm Convergence): HTML/CSS structure. Goal: Organize. Method: HTML/CSS (Tailwind). NO SVG.
-            - Lists (Features, Examples, Advantages, Use Cases, Challenges): Styled HTML lists. Goal: Inform. Method: HTML/CSS.
-            - Icons: Unicode characters. Goal: Inform (visual cue). Method: Unicode. NO SVG.
-            - Placeholder Bar Chart (Example: Popularity of Hybrid Languages): Chart.js Canvas. Goal: Compare. Method: Chart.js. NO SVG.
-            - Placeholder Donut Chart (Example: AI Application Areas): Chart.js Canvas. Goal: Compare. Method: Chart.js. NO SVG.
-            - Explicit confirmation: NO SVG graphics were used. NO MERMAID JS was used.
-        */
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="antialiased">
 
@@ -159,11 +83,11 @@
                         <p class="text-sm text-[#455A64]">Un dialecto de Lisp dinámico y funcional que corre en la JVM y JavaScript.</p>
                     </div>
                 </div>
-                 <p class="text-sm text-[#455A64] mb-4">Para ilustrar la popularidad (hipotética) o el enfoque de estos lenguajes en IA, consideremos el siguiente gráfico de barras. Muestra una distribución ficticia de la relevancia percibida o la adopción en proyectos de IA.</p>
+                <p class="text-sm text-[#455A64] mb-4">Para ilustrar la popularidad (hipotética) o el enfoque de estos lenguajes en IA, consideremos el siguiente gráfico de barras. Muestra una distribución ficticia de la relevancia percibida o la adopción en proyectos de IA.</p>
                 <div class="chart-container bg-gray-50 p-4 rounded-lg shadow">
                     <canvas id="popularLanguagesChart"></canvas>
                 </div>
-                 <p class="text-xs text-gray-500 mt-2 text-center">Este gráfico es ilustrativo y los datos son ficticios.</p>
+                <p class="text-xs text-gray-500 mt-2 text-center">Este gráfico es ilustrativo y los datos son ficticios.</p>
 
             </div>
         </section>
@@ -196,4 +120,15 @@
                         <span class="text-2xl mr-3">🧩</span>
                         <div>
                             <h4 class="font-semibold text-xl accent-text">3. Abstracción y Modularidad</h4>
-                            <p class="text-[#455A64]">Las funciones de orden superior permiten construir abstracciones poderosas, llevando a un código más concis
+                            <p class="text-[#455A64]">Las funciones de orden superior permiten construir abstracciones poderosas, llevando a un código más conciso, expresivo y fácil de mantener, crucial para algoritmos de IA complejos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
